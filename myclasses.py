@@ -1,3 +1,5 @@
+from enum import Enum
+
 class Direction(Enum):
     NORTH = 0
     EAST = 1
@@ -17,7 +19,7 @@ class Cell:
         self.addWall(Wall(Direction.EAST))
         self.addWall(Wall(Direction.SOUTH))
         self.addWall(Wall(Direction.WEST))
-        
+
 class Wall:
     def __init__(self, dir):
         self.passable = False
