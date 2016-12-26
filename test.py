@@ -1,5 +1,4 @@
-from myclasses import Cell
-from myclasses import Wall
+from myclasses import Grid
 
-asd = Cell()
-asd.addWalls()
+mygrid = Grid(10,10)
+mygrid.the_works(0,0)
