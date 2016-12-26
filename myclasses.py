@@ -65,10 +65,9 @@ class Grid:
         for i in range (0, self.no_rows-1):
             for j in range(0, self.no_cols-1):
                 if i < self.no_rows:
-                    asd = Cell.add_wall_between (self.cells[i][j], self.cells[i+1][j])
-                    self.walls.extend(asd)
+                    self.walls.append(Cell.add_wall_between (self.cells[i][j], self.cells[i+1][j]))
                 if j < self.no_cols:
-                    self.walls.extend(Cell.add_wall_between (self.cells[i][j], self.cells[i][j+1]))
+                    self.walls.append(Cell.add_wall_between (self.cells[i][j], self.cells[i][j+1]))
 
     def the_works(self,start_row, start_col):
         self.working_walls.extend(self.cells[start_row][start_col].select())
